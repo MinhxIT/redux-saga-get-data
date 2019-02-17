@@ -3,8 +3,8 @@ import './App.css';
 import { connect } from 'react-redux';
 class App extends Component {
   render() {
-    const { fetching, info, fetchInfo, error } = this.props;
-    console.log("Fetching: ",fetching,"info: ", info, "fetch info: ",fetchInfo,"error:" ,error );
+      const { fetching, info, fetchInfo, error } = this.props;
+    console.log("Fetching: ",fetching,"info: ", info, "FetchInfo: ",fetchInfo,"error:" ,error );
     return (
       <div className="App">
       {fetching ? (
@@ -22,7 +22,7 @@ class App extends Component {
               <table className="table table-dark">
               <thead className="thead-dark">
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">STT</th>
                   <th scope="col">Name</th>
                   <th scope="col">Team name</th>
                   <th scope="col">Games played</th>

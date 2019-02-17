@@ -7,17 +7,17 @@ import axios from 'axios';
 
  
 function fetchInfo(){ // function that makes the api request and returns a Promise for response
-    // return axios.get('https://pastebin.com/raw/T0we91yW')
+    return axios.get('https://nba-players.herokuapp.com/players-stats/');
     // .then((info)=>{
     //     console.log(info);
     // })
     // .catch((err)=>{
     //     console.log(err);
     // })
-    return axios({
-        method: "get",
-        url: "https://nba-players.herokuapp.com/players-stats/"
-      });
+    // return axios({
+    //     method: "get",
+    //     url: "https://nba-players.herokuapp.com/players-stats/"
+    //   });
 }
 function* workerSaga(){
     try {

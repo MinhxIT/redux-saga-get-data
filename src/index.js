@@ -3,18 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-import { createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
-import reducers from './reducers/reducers';
-import { watcherSaga } from "./sagas/sagas";
 import { Provider } from "react-redux";
-// tạo saga middle ware
-const sagaMiddleware = createSagaMiddleware();
-// tạo store 
-let store = createStore(reducers,applyMiddleware(sagaMiddleware));
-// chạy saga
-sagaMiddleware.run(watcherSaga);
+import store from './store/store';
 
 ReactDOM.render(
     <Provider store={store}>
